@@ -2,6 +2,7 @@
 from account import create_user, login, logout
 from shoppingItemsList import display_shopping_list, get_shopping_items_list_from_file
 from add_to_cart import add_to_cart
+from cart import display_shopping_cart
 
 cart = {}
 username = ""
@@ -43,7 +44,8 @@ while True:
                         else:
                             print("Invalid choice!")
                 elif choice == "4":
-                    view_cart(username)
+                    display_shopping_cart(cart[username])
+                    
                 elif choice == "5":
                     checkout(username)
                 elif choice == "6":

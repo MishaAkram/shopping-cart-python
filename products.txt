@@ -1,7 +1,7 @@
 Vanilla, 55.00, 100
 Chocolate, 60.00, 100
-Strawberry, 65.00, 100
-Mint Chocolate Chip, 70.00, 100
+Strawberry, 65.00,88
+Mint Chocolate Chip, 70.00,99
 Cookies and Cream, 75.00, 100
 Butter Pecan, 80.00, 100
 Rocky Road, 85.00, 100
@@ -16,5 +16,5 @@ Rainbow Sherbet, 125.00,0
 Peppermint, 130.00, 100
 Salted Caramel, 135.00, 100
 Coconut, 140.00, 100
-Maple Walnut, 145.00, 100
+Maple Walnut, 145.00,88
 Birthday Cake, 150.00, 100
