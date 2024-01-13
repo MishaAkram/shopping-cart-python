@@ -1,0 +1,20 @@
+Vanilla, 55.00, 100
+Chocolate, 60.00, 100
+Strawberry, 65.00, 100
+Mint Chocolate Chip, 70.00, 100
+Cookies and Cream, 75.00, 100
+Butter Pecan, 80.00, 100
+Rocky Road, 85.00, 100
+Coffee, 90.00, 100
+Pistachio, 95.00, 100
+Neapolitan, 100.00, 100
+Cookie Dough, 105.00, 100
+Chocolate Chip, 110.00, 100
+Dulce de Leche, 115.00, 100
+Cherry Garcia, 120.00, 100
+Rainbow Sherbet, 125.00, 100
+Peppermint, 130.00, 100
+Salted Caramel, 135.00, 100
+Coconut, 140.00, 100
+Maple Walnut, 145.00, 100
+Birthday Cake, 150.00, 100

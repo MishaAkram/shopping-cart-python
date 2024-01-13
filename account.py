@@ -35,11 +35,12 @@ def logout():
     pass
 
 # Usage example:
-create_user("john", "password123")
-create_user("jane", "secret456")
+# create_user("john", "password123")
+# create_user("jane", "secret456")
 
-print(login("john", "password123"))  # True
-print(login("jane", "wrongpassword"))  # False
+# print(login("john", "password123"))  # True
+# print(login("jane", "wrongpassword"))  # False
 
-logout()
+# logout()/
+
 
