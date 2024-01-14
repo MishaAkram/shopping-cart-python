@@ -1,8 +1,8 @@
 
-from data import get_cart, get_username
+from data import get_cart, get_username, cart
 from account import create_user, login, logout
 from shoppingItemsList import display_shopping_list, get_shopping_items_list_from_file
-from add_to_cart import add_to_cart
+from add_to_cart import add_to_cart, remove_from_cart
 from cart import display_shopping_cart
 from checkout import checkout
 from display_history import display_history
@@ -36,20 +36,32 @@ while True:
                 choice = input("Please enter your choice: ")
                 # If the user chooses option 3 (View Items)
                 if choice == "1":
-                    # Display the shopping items list
-                    display_shopping_list(get_shopping_items_list_from_file())
-                    # Add items to the cart
-                    add_to_cart()
-
-                    # Start an infinite loop for adding more items to the cart
                     while True:
-                        choice = input("Would you like to add another item? (y/n): ")
-                        if choice == "y":
-                            add_to_cart()
-                        elif choice == "n":
+                        # Display the shopping items list
+                        display_shopping_list(get_shopping_items_list_from_file())
+                        # Remove items from the cart
+                        print("1. Add an item from the cart")
+                        print("2. Remove an item from the cart")
+                        print("3. Go back")
+                        n = input("Please enter your choice: ")
+                        if n == "1":
+                            add_to_cart()                            
+                            # Start an infinite loop for adding more items to the cart
+                            while True:
+                                choice = input("Would you like to add another item? (y/n): ")
+                                if choice == "y":
+                                    add_to_cart()
+                                elif choice == "n":
+                                    break
+                                else:
+                                    print("Invalid choice!")
+                        elif n == "2":
+                            remove_from_cart(cart, get_username())
+                        elif n == "3":
                             break
                         else:
-                            print("Invalid choice!")
+                            print("Invalid choice!")    
+
 
                 # If the user chooses option 4 (View cart)
                 elif choice == "2":

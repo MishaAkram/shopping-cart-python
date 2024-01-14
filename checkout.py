@@ -36,4 +36,12 @@ def checkout():
     # Append the transaction history to the "history.txt" file
     with open("history.txt", "a") as file:
         file.write(history)
+    
+    print("Thank you for shopping with us!")
+    print("Your transaction history has been saved successfully.")
+    print("Your cart has been cleared successfully.")
+    print("Goodbye!")
+
+    input("Press Enter to continue...")
+    
 

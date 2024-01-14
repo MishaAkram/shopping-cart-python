@@ -1,15 +1,15 @@
-Vanilla, 55.00,98
-Chocolate, 60.00,96
-Strawberry, 65.00,55
-Mint Chocolate Chip, 70.00, 100
+Vanilla, 55.00,96
+Chocolate, 60.00,91
+Strawberry, 65.00,52
+Mint Chocolate Chip, 70.00,79
 Cookies and Cream, 75.00,97
-Butter Pecan, 80.00,98
+Butter Pecan, 80.00,92
 Rocky Road, 85.00, 100
 Coffee, 90.00, 100
 Pistachio, 95.00, 100
 Neapolitan, 100.00, 100
 Cookie Dough, 105.00, 100
-Chocolate Chip, 110.00,0
+Chocolate Chip, 110.00, 100
 Dulce de Leche, 115.00,98
 Cherry Garcia, 120.00,96
 Rainbow Sherbet, 125.00, 100
