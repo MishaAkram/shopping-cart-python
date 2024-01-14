@@ -4,11 +4,7 @@ from display_products import display_ice_cream_flavors
 # Defining a function named display_shopping_list that takes a parameter named shopping_list
 def display_shopping_list(shopping_list):
     # Printing a message to indicate that the shopping list is being displayed
-    print("Here is your shopping list:")
-    # Iterating over each item in the shopping list
-    for item in shopping_list:
-        # Printing each item in the shopping list
-        print(item)
+     display_ice_cream_flavors(shopping_list)
 
 # Defining a function named get_shopping_items_list_from_file
 def get_shopping_items_list_from_file():

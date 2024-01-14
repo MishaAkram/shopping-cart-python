@@ -1,6 +1,10 @@
 
+from data import cart, get_username
+
 # Define a function named add_to_cart that takes in a cart dictionary and a username as parameters
-def add_to_cart(cart ,username):
+
+def add_to_cart():
+    user_name= get_username()
     # Open the "products.txt" file in read mode
     with open("products.txt", 'r') as file:
         # Read the content of the file
@@ -24,11 +28,11 @@ def add_to_cart(cart ,username):
                 return
 
             # Check if the username is not already in the cart dictionary
-            if username not in cart:
+            if user_name not in cart:
                 # Add an empty list as the value for the username key in the cart dictionary
-                cart[username] = []            
+                cart[user_name] = []            
             # Append a dictionary representing the chosen item to the list associated with the username key in the cart dictionary
-            cart[username].append({
+            cart[user_name].append({
                 "name": name,
                 "price": price,
                 "quantity": quantity

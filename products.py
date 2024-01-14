@@ -43,6 +43,27 @@ def update_icecream_price():
     # Return False if the flavor was not found
     return False
 
+def restock_icecream_flavour():
+    # Prompt the user to enter the name of the ice cream flavor to restock
+    icecream_flavour = input("Please enter the name of the ice cream flavor you wish to restock: ")
+    # Prompt the user to enter the quantity of the ice cream flavor to restock
+    icecream_quantity = int(input("Please enter the quantity of the ice cream flavor you wish to restock: "))
+    # Open the file in read mode
+    with open("icecream.txt", "r") as file:
+        # Iterate over each line in the file
+        for line in file:
+            # Split the line by ":" to get the stored flavor
+            stored_flavour, _ = line.strip().split(":")
+            # Check if the entered flavor matches the stored flavor
+            if icecream_flavour == stored_flavour:
+                # Open the file in write mode
+                with open("icecream.txt", "w") as file:
+                    # Write the new quantity to the file
+                    file.write(str(icecream_quantity) + "\n")
+                # Return True to indicate successful restock
+                return True
+    # Return False if the flavor was not found
+    return False
     
 
     
