@@ -57,29 +57,18 @@ def add_to_cart():
             # Print an error message for an invalid choice
             print("Invalid choice. Please try again.")
 
-# Define a function named update_quantity_products_List that takes in the choice, quantity, file, and items as parameters
-def update_quantity_products_List(choice, quantity, file, items):
-    # Initialize an empty string to store the updated product information
-    update_product = ""
-    # Extract the name, price, and quantity of the chosen item from the items list
-    name, price, quantity_ = chosen_item = items[choice - 1].strip().split(",")
-    # Calculate the updated quantity of the chosen item
-    update_product = f"{name},{price},{int(quantity_) - quantity}"
-    # Write the updated product information to the file
-    file.write(f"{chosen_item},{update_product}\n")
-            
    
 def remove_from_cart(cart, username):
-    if username not in cart or not cart[username]:
-        print("Cart is empty or username not found.")
-        return
-
-    # Display the current cart for the user
-    print(f"Current Cart for {username}:")
-    for index, item in enumerate(cart[username], start=1):
-        print(f"{index}. {item['name']} - Price: ${item['price']}, Quantity: {item['quantity']}")
-
     try:
+        if username not in cart or not cart[username]:
+            print("Cart is empty or username not found.")
+            return
+
+        # Display the current cart for the user
+        print(f"Current Cart for {username}:")
+        for index, item in enumerate(cart[username], start=1):
+            print(f"{index}. {item['name']} - Price: ${item['price']}, Quantity: {item['quantity']}")
+
         # Prompt the user to enter the index of the item to remove
         index_to_remove = int(input("Enter the index of the item to remove:"))
 
@@ -87,21 +76,31 @@ def remove_from_cart(cart, username):
         if 1 <= index_to_remove <= len(cart[username]):
             removed_item = cart[username].pop(index_to_remove - 1)
             print(f"Removed item: {removed_item}")
+
+            # Update the product data file with the added quantity
+            with open("products.txt", 'r') as file:
+                content = file.read()
+                items = content.split("\n")
+
+                # Find the corresponding item in the product data
+                name, price, available_quantity = removed_item['name'], removed_item['price'], removed_item['quantity']
+                updated_quantity = int(available_quantity) + int(items[index_to_remove - 1].split(",")[2])
+
+                # Update the product data with the added quantity
+                updated_product = f"{name},{price},{updated_quantity}"
+                content = content.replace(items[index_to_remove - 1], updated_product)
+
+            # Write the updated content back to the product data file
+            with open("products.txt", 'w') as fileW:
+                fileW.write(content)
+
         else:
             print("Invalid index. Please enter a valid index.")
 
-    except ValueError:
-        print("Invalid input. Please enter a valid number.")
-    except IndexError:
-        print("Invalid index. Please enter a valid index.")
-    except TypeError:
-        print("Invalid input. Please enter a valid number.")
-    except KeyError:
-        print("Invalid username. Please enter a valid username.")
+    except (ValueError, IndexError, TypeError, KeyError) as err:
+        print("Invalid input. Please enter a valid value.")
+        print(err)
     except Exception as err:
         print("Something went wrong. Please try again.")
         print(err)
 
-# Example usage:
-username = "User123"  # Replace with the actual username
-remove_from_cart(cart, username)

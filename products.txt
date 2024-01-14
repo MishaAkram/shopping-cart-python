@@ -1,10 +1,10 @@
-Vanilla, 55.00,96
+Vanilla, 55.00,91
 Chocolate, 60.00,91
-Strawberry, 65.00,52
-Mint Chocolate Chip, 70.00,79
+Strawberry, 65.00,49
+Mint Chocolate Chip, 70.00,71
 Cookies and Cream, 75.00,97
 Butter Pecan, 80.00,92
-Rocky Road, 85.00, 100
+Rocky Road, 85.00,93
 Coffee, 90.00, 100
 Pistachio, 95.00, 100
 Neapolitan, 100.00, 100
