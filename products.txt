@@ -1,6 +1,6 @@
 Vanilla, 55.00,98
 Chocolate, 60.00,96
-Strawberry, 65.00,58
+Strawberry, 65.00,55
 Mint Chocolate Chip, 70.00, 100
 Cookies and Cream, 75.00,97
 Butter Pecan, 80.00,98
@@ -9,9 +9,9 @@ Coffee, 90.00, 100
 Pistachio, 95.00, 100
 Neapolitan, 100.00, 100
 Cookie Dough, 105.00, 100
-Chocolate Chip, 110.00,3
-Dulce de Leche, 115.00,99
-Cherry Garcia, 120.00, 100
+Chocolate Chip, 110.00,0
+Dulce de Leche, 115.00,98
+Cherry Garcia, 120.00,96
 Rainbow Sherbet, 125.00, 100
 Peppermint, 130.00, 100
 Salted Caramel, 135.00, 100

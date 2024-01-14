@@ -1,10 +1,12 @@
 
-from data import get_cart
+from data import get_cart, get_username
 from account import create_user, login, logout
 from shoppingItemsList import display_shopping_list, get_shopping_items_list_from_file
 from add_to_cart import add_to_cart
 from cart import display_shopping_cart
 from checkout import checkout
+from display_history import display_history
+
 # Import necessary functions from other modules
 # Start an infinite loop for the main program
 while True:
@@ -27,24 +29,13 @@ while True:
             # Start an infinite loop for the logged-in user menu
             while True:
                 print("Please choose from the following options:")
-                print("1. Add item to cart")
-                print("2. Remove item from cart")
-                print("3. View Items")
-                print("4. View cart")
-                print("5. Checkout")
-                print("6. Logout")
+                print("1. View Items")
+                print("2. View cart")
+                print("3. View History")
+                print("4. Logout")
                 choice = input("Please enter your choice: ")
-
-                # If the user chooses option 1 (Add item to cart)
-                if choice == "1":
-                    item = input("Please enter the item you wish to add: ")
-
-                # If the user chooses option 2 (Remove item from cart)
-                elif choice == "2":
-                    item = input("Please enter the item you wish to remove: ")
-
                 # If the user chooses option 3 (View Items)
-                elif choice == "3":
+                if choice == "1":
                     # Display the shopping items list
                     display_shopping_list(get_shopping_items_list_from_file())
                     # Add items to the cart
@@ -61,9 +52,10 @@ while True:
                             print("Invalid choice!")
 
                 # If the user chooses option 4 (View cart)
-                elif choice == "4":
+                elif choice == "2":
                     # Display the shopping cart for the logged-in user
                     user_cart=get_cart()
+                    print(user_cart)
                     display_shopping_cart(user_cart)
                     if user_cart:
                         choice = input("Would you like to proceed to checkout? (y/n): ")
@@ -73,13 +65,13 @@ while True:
                             break
                         else:
                             print("Invalid choice!")
-
-                # If the user chooses option 5 (Checkout)
-                elif choice == "5":
-                    checkout()
+                # If the user chooses option 4 (View History)
+                elif choice == "3":
+                    print("\nView History for", get_username() + ":")  # Print a heading for the view history
+                    display_history(get_username())
 
                 # If the user chooses option 6 (Logout)
-                elif choice == "6":
+                elif choice == "4":
                     logout()
                     break
 

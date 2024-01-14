@@ -21,7 +21,7 @@ def checkout():
         print("item")
         print(item)
         # Concatenate the item name, price, and quantity to the cart string
-        cart_string += cart_string + item["name"] + "," + str(item["price"]) + "," + str(item["quantity"]) + "|"
+        cart_string += cart_string + item["name"] + "," + str(item["price"]) + "," + str(item["quantity"]) + ":"
 
     # Remove the trailing "|" character from the cart string
     cart_string = cart_string[:-1]
@@ -30,7 +30,7 @@ def checkout():
     # Print the username and current datetime
 
     # Create the transaction history string
-    history = "{}:[{}],{}".format(get_username(), cart_string, current_datetime)
+    history = "{}|[{}]|{}".format(get_username(), cart_string, current_datetime)
     history += "\n"
 
     # Append the transaction history to the "history.txt" file
