@@ -3,7 +3,7 @@
 def display_ice_cream_flavors(flavors):
     # Print a header for the ice cream shop
     print("+--------------------------------------------------------------------+")
-    print("|                   WELCOME TO ICE CREAM SHOP                        |")
+    print("|                   WELCOME TO FROSTY FLAVOURS                       |")
     print("+--------------------------------------------------------------------+")
     # Print a table header for the flavors
     print("| S.No | {:<20} | {:<10} | {:<25} |".format("Flavor", "Price", "Quantity Available"))

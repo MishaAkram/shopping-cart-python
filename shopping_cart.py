@@ -10,7 +10,7 @@ from display_history import display_history
 # Import necessary functions from other modules
 # Start an infinite loop for the main program
 while True:
-    print("Welcome to the shopping cart program!")
+    print("˚☽˚｡⋆｡❅*WELCOME TO FROSTY FLAVOURS!˚☽˚｡⋆｡❅*")
     print("Please choose from the following options:")
     print("1. Login")
     print("2. Register")
