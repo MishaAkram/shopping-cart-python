@@ -57,7 +57,7 @@ def add_to_cart():
             # Print an error message for an invalid choice
             print("Invalid choice. Please try again.")
 
-   
+# Define a function named remove_from_cart that takes in a cart dictionary and a username as parameters   
 def remove_from_cart(cart, username):
     try:
         if username not in cart or not cart[username]:
@@ -96,7 +96,8 @@ def remove_from_cart(cart, username):
 
         else:
             print("Invalid index. Please enter a valid index.")
-
+    
+    # Handle exceptions
     except (ValueError, IndexError, TypeError, KeyError) as err:
         print("Invalid input. Please enter a valid value.")
         print(err)

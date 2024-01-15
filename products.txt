@@ -1,4 +1,4 @@
-Vanilla, 55.00, 100
+Cookies and Cream, 75.00, 100
 Chocolate, 60.00, 100
 Strawberry, 65.00, 100
 Mint Chocolate Chip, 70.00, 100

@@ -34,55 +34,65 @@ while True:
                 print("3. View History")
                 print("4. Logout")
                 choice = input("Please enter your choice: ")
-                # If the user chooses option 3 (View Items)
+                # If the user chooses option 1 (View Items)
                 if choice == "1":
                     while True:
                         # Display the shopping items list
                         display_shopping_list(get_shopping_items_list_from_file())
+                        # Add items to the cart or
                         # Remove items from the cart
+                        # Go back to the main menu
                         print("1. Add an item from the cart")
                         print("2. Remove an item from the cart")
                         print("3. Go back")
                         n = input("Please enter your choice: ")
+                        # if the user chooses option 1 (Add an item from the cart)
                         if n == "1":
                             add_to_cart()                            
                             # Start an infinite loop for adding more items to the cart
                             while True:
                                 choice = input("Would you like to add another item? (y/n): ")
+                                # If the user chooses option 1 (Yes) then add another item to the cart
                                 if choice == "y":
                                     add_to_cart()
+                                # If the user chooses option 2 (No) then go back to the main menu   
                                 elif choice == "n":
                                     break
                                 else:
                                     print("Invalid choice!")
+                        # if the user chooses option 2 (Remove an item from the cart) by inputting the item number           
                         elif n == "2":
                             remove_from_cart(cart, get_username())
+                        # if the user chooses option 3 (Go back) then go back to the main menu    
                         elif n == "3":
                             break
                         else:
                             print("Invalid choice!")    
 
 
-                # If the user chooses option 4 (View cart)
+                # If the user chooses option 2 (View cart)
                 elif choice == "2":
                     # Display the shopping cart for the logged-in user
                     user_cart=get_cart()
                     print(user_cart)
+                    # Start an infinite loop for the shopping cart menu
                     display_shopping_cart(user_cart)
                     if user_cart:
                         choice = input("Would you like to proceed to checkout? (y/n): ")
+                        # If the user chooses option 1 (Yes) then proceed to checkout
                         if choice == "y":
                             checkout()
+                        # If the user chooses option 2 (No) then go back to the main menu    
                         elif choice == "n":
                             break
                         else:
                             print("Invalid choice!")
-                # If the user chooses option 4 (View History)
+                # If the user chooses option 3 (View History)
                 elif choice == "3":
                     print("\nView History for", get_username() + ":")  # Print a heading for the view history
                     display_history(get_username())
 
-                # If the user chooses option 6 (Logout)
+                # If the user chooses option 4 (Logout)
                 elif choice == "4":
                     logout()
                     break
